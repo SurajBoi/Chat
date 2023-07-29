@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+
+</head>
+
+<body>
+    <div class="contain">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="header ">
+                    <form action="/send" method="post">
+                        <textarea rows=3 class="msgbar" name="messagebar"> </textarea>
+                        <button class="send" id="send"> </button>
+                    </form>
+
+                </div>
+
+                <div class="mid">
+                    <div class="msg">
+                        <div class="fromMe">
+
+
+                        </div>
+                        <% message.forEach(function(item){ %>
+                            <div class="toMe">
+                                <b>
+                                    <%= item.send %>
+                                </b>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <div class="mesg">
+                        <center>
+
+                            <button class="emojibutton"> <img class="imageemoji emoj1"
+                                    src="images/Disappointed Face Emoji.png"> </button>
+                            <button class="emojibutton"> <img class="imageemoji emoj2"
+                                    src="images/Slightly Smiling Emoji [Free Download IOS Emojis].png">
+                            </button>
+                            <button class="emojibutton"> <img class="imageemoji emoj3"
+                                    src="images/Smile Emoji With Hearts.png"> </button>
+                            <button class="emojibutton"> <img class="imageemoji emoj4"
+                                    src="images/Tears Of Joy Emoji [Free Download iPhone Emojis].png">
+                            </button>
+                            <button class="emojibutton"> <img class="imageemoji emoj5"
+                                    src="images/Thumbs Up Emoji [Free Download IOS Emojis].png"> </button>
+                        </center>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <input type="text" class="add">
+                <div class="contacts">
+                    <button class="end" style="text-align:center"></button>
+                    <button class="end" style="text-align:center"></button>
+                    <button class="end" style="text-align:center"></button>
+                    <button class="end" style="text-align:center"></button>
+                    <button class="end" style="text-align:center"></button>
+                    <button class="end" style="text-align:center"></button>
+                    <button class="end" style="text-align:center"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="javascripts/script.js"></script>
+
+</body>
+
+</html>
